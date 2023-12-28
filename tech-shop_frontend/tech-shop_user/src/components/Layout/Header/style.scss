@@ -1,0 +1,149 @@
+.nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 3px solid var(--primary-color);
+  position: fixed;
+  z-index: 1000;
+  &__logo {
+    & > a {
+      font-size: 32px;
+      font-family: 'Young Serif', serif;
+      color: var(--text-color);
+
+      span {
+        color: var(--primary-color);
+      }
+    }
+    button {
+      display: none;
+      font-size: 30px;
+      background-color: transparent;
+      color: var(--primary-color);
+      border: transparent;
+      cursor: pointer;
+    }
+  }
+  &__menu--pc {
+    display: flex;
+    li {
+      a {
+        font-size: 20px;
+        color: var(--text-color);
+        padding: 6px 24px;
+        &:hover {
+          border-bottom: 1px solid var(--primary-color);
+        }
+      }
+    }
+  }
+  &__menu--mobile {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 50px;
+    transition: all 0.3s linear;
+    z-index: 10;
+    button {
+      font-size: 24px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background-color: transparent;
+      color: var(--primary-color);
+      border: none;
+      z-index: 2;
+      cursor: pointer;
+    }
+    li {
+      a {
+        display: block;
+        padding: 16px 24px;
+        color: var(--text-color);
+        transition: all 0.3s linear;
+        &:hover {
+          padding: 16px 24px 16px 30px;
+          background: #f1f5f8;
+          color: #243a52;
+        }
+      }
+    }
+    &-btns {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 20px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    &--cart {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 24px;
+      color: var(--text-color);
+      margin-right: 10px;
+      &-icon {
+        position: relative;
+        display: flex;
+        span {
+          position: absolute;
+          top: -10px;
+          right: -16px;
+          background: var(--primary-color);
+          width: 16px;
+          height: 16px;
+          display: flex;
+          -webkit-box-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          justify-content: center;
+          border-radius: 50%;
+          font-size: 0.75rem;
+          color: var(--white-color);
+          padding: 12px;
+        }
+      }
+    }
+    &--login {
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 16px;
+      font-size: 24px;
+      color: var(--text-color);
+      gap: 5px;
+    }
+  }
+}
+.show {
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    display: block;
+    &__logo {
+      display: flex;
+      justify-content: space-between;
+      & > button {
+        display: block;
+      }
+    }
+    &__menu--pc {
+      display: none;
+    }
+
+    &__btns {
+      display: none;
+    }
+  }
+}

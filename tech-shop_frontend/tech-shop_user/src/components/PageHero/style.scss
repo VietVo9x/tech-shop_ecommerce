@@ -1,0 +1,25 @@
+.page-hero {
+  background-color: #ededed;
+  padding-top: 66px;
+
+  &__center {
+    min-height: 120px;
+
+    gap: 10px;
+    h3 {
+      font-size: 32px;
+      gap: 10px;
+      transition: all 0.3s linear;
+      flex-wrap: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.breadcrumb_title {
+  color: var(--text-color);
+  padding-right: 10px;
+  &:hover {
+    color: var(--primary-color);
+  }
+}

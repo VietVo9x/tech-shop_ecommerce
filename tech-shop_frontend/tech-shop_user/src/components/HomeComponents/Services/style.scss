@@ -1,0 +1,45 @@
+@import '/src/assets/css/global.scss';
+
+.services-wrapper {
+  background-color: #eaded7;
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 10px;
+    &__item {
+      text-align: center;
+      border: 1px solid #ccc;
+      background-color: #c5a491;
+      border-radius: 4px;
+      padding: 30px 20px;
+      &-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 auto;
+        background-color: var(--white-color);
+        margin-bottom: 10px;
+        svg {
+          font-size: 32px;
+        }
+      }
+      h3 {
+        margin-bottom: 10px;
+      }
+      p {
+        line-height: 1.8;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .services-wrapper {
+    .services {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

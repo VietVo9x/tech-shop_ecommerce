@@ -1,0 +1,33 @@
+.footer {
+  padding: 60px 10px;
+  background-color: var(--text-color);
+  color: var(--white-color);
+  &__content {
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
+    &--top {
+      margin-bottom: 15px;
+      text-align: center;
+      p {
+        font-family: 'Young Serif', serif;
+        font-size: 24px;
+        span {
+          color: var(--primary-color);
+        }
+      }
+    }
+    &--bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        &:first-child {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
